@@ -62,47 +62,33 @@ Porque esse aplicativo é um CRUD? Isso se deve ao fato de que ele executa as qu
 4. **Delete (Excluir):** Os usuários têm a opção de excluir pedidos existentes clicando no botão "Cancelar" na coluna "Ações" da tabela de pedidos. Isso remove o pedido selecionado do banco de dados.
 
 ## EXECUTANDO O PROJETO:
-1. **Configurar a variável de ambiente OPENSSL_CONF**:
-   - Execute o comando:
-     ```cmd
-     set OPENSSL_CONF=C:\Caminho\Para\Seu\Arquivo\openssl.cnf
-     ```
-   Substitua `C:\Caminho\Para\Seu\Arquivo\openssl.cnf` pelo caminho completo para o seu arquivo `openssl.cnf`. Este comando é necessário para garantir que o OpenSSL use as configurações corretas durante a construção ou execução do seu aplicativo.
-
-2. **Configurar as opções do Node.js para usar o provedor OpenSSL legado**:
-   - Execute o comando:
-     ```cmd
-     set NODE_OPTIONS=--openssl-legacy-provider && npm run build
-     ```
-   Este comando define temporariamente as opções do Node.js para usar o provedor OpenSSL legado durante a construção do seu aplicativo. Isso é necessário para contornar problemas de compatibilidade com o Webpack.
-
-3. **Instalar as dependências do projeto**:
+1. **Instalar as dependências do projeto**:
    - Execute o comando no diretório `CODIGO/`:
      ```cmd
      npm install
      ```
    Este comando instala todas as dependências listadas no arquivo `package.json` do seu projeto. Certifique-se de estar no diretório do seu projeto ao executar este comando.
 
-3. **Iniciando o Servidor Localmente:**
+2. **Iniciando o Servidor Localmente:**
    Antes de iniciar o aplicativo, é necessário iniciar o servidor localmente. Se estiver utilizando o framework Adonis.js, você pode iniciar o servidor executando o seguinte comando no diretório `CODIGO/`:
    ```
    npm run backend
    ```
 
-4. **Executando o Aplicativo:**
+3. **Executando o Aplicativo:**
    - Ainda no diretório `CODIGO/`, abra outro terminal ou prompt de comando e digite o seguinte comando:
    ```bash
    npm run serve
    ```
    - Acesse o aplicativo no navegador visitando `http://localhost:8080/`.
-   - Lembre-se de manter os dois terminais ou prompts de comando (o do passo 3 também) em execução simultaneamente.
+   - Lembre-se de manter os dois terminais ou prompts de comando (o do passo 2 também) em execução simultaneamente.
 
-5. **Fazendo um Pedido de Burger:**
+4. **Fazendo um Pedido de Burger:**
    - Na seção "Fazer Pedido" do aplicativo, preencha o formulário "Monte o seu burger" com as opções disponíveis, como o nome do cliente, escolha do pão, carne e ingredientes opcionais.
    - Depois de preencher o formulário, clique no botão "Criar meu Burger!" para enviar o pedido.
    - Aguarde a confirmação de que o pedido foi realizado com sucesso.
 
-6. **Gerenciando Pedidos Existentes:**
+5. **Gerenciando Pedidos Existentes:**
    - Na seção "Lista de Pedidos", você verá uma tabela com todos os pedidos de burger registrados no sistema.
    - Você pode visualizar os detalhes de cada pedido, incluindo o cliente, tipo de pão, carne, ingredientes opcionais e status.
    - Use o menu suspenso na coluna "Ações" para atualizar o status do pedido (por exemplo, de "Solicitado" para "Finalizado") ou clique no botão "Cancelar" para excluir o pedido.
